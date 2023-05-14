@@ -26,41 +26,43 @@ function finalizarCalculo() {
 
     // Pergunta 2 
     var eletricidade = $('#input-pergunta-2').val();
-    var resultadoSujoEletricidade = (((186*eletricidade + 52.4)*1000).toFixed(2));
+    var resultadoSujoEletricidade = (((0.0697*eletricidade  - 0.00274)).toFixed(2));
     $('#resultado-limpo-2').html(((0.035*eletricidade).toFixed(2)));
     $('#resultado-sujo-2').html(resultadoSujoEletricidade);
 
     // Pergunta 3 
     var gas = $('#input-pergunta-3').val();
-    var resultadoSujoGas = (((0.482*gas + 1.32)*1000).toFixed(2));
-    $('#resultado-limpo-3').html("X.XX");
+    var resultadoSujoGas = (((35.89*gas)).toFixed(2));
+    var resultadoLimpoGas = ((((3.5/1000)*605.8)*gas).toFixed(2));
+    $('#resultado-limpo-3').html(resultadoLimpoGas);
     $('#resultado-sujo-3').html(resultadoSujoGas);
 
     // Pergunta 4 
     var residuos = $('#input-pergunta-4').val();
-    var resultadoSujoResiduos = (((1.93*residuos + 3.14)*1000).toFixed(2));
-    $('#resultado-limpo-4').html(((4/1000)*residuos).toFixed(2));
+    var resultadoSujoResiduos = ((((0.03*residuos)*1000)*pessoas).toFixed(2));
+    $('#resultado-limpo-4').html((((4/1000)*residuos)*pessoas).toFixed(2));
     $('#resultado-sujo-4').html(resultadoSujoResiduos);
 
     // Pergunta 5
     var transporteIndividual = $('#input-pergunta-5').val();
-    var resultadoSujoTransporteIndividual = (((200*transporteIndividual + 600).toFixed(2)));
-    $('#resultado-limpo-5').html("X.XX");
+    var resultadoSujoTransporteIndividual = (((2.84*transporteIndividual).toFixed(2)));
+    var resultadoLimpoTransporteIndividual = ((((1/1000)*transporteIndividual).toFixed(2)));
+    $('#resultado-limpo-5').html(resultadoLimpoTransporteIndividual);
     $('#resultado-sujo-5').html(resultadoSujoTransporteIndividual);
 
     // Pergunta 6 
   
 
     var transporteColetivo = $('#input-pergunta-6').val();
-    var resultadoSujoTransporteColetivo = (((2*transporteColetivo + 13)*1000).toFixed(2));
-    $('#resultado-limpo-6').html("X.XX");
+    var resultadoSujoTransporteColetivo = ((0.32*transporteColetivo).toFixed(2));
+    var resultadoLimpoTransporteColetivo = (((1.90/1000)*transporteColetivo).toFixed(2));
+    $('#resultado-limpo-6').html(resultadoLimpoTransporteColetivo);
     $('#resultado-sujo-6').html(resultadoSujoTransporteColetivo);
 
     // Pergunta 7
 
     var carne = $('#input-pergunta-7').val();
-    var resultadoSujoCarne = ((0.0664*carne + 4.82)*1000).toFixed(2);
-    $('#resultado-limpo-7').html("X.XX");
+    var resultadoSujoCarne = ((0.0664*carne)*1000).toFixed(2);
     $('#resultado-sujo-7').html(resultadoSujoCarne);
 
     // Diferença
